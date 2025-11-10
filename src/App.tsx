@@ -12,7 +12,8 @@ import { HomePage } from './pages/HomePage';
 import { QuantumDashPage } from './pages/QuantumDashPage';
 import { KycSuitePage } from './pages/KycSuitePage';
 import { CustomAiPage } from './pages/CustomAiPage';
-import { BlogPage } from './pages/BlogPage'; // 1. Import new BlogPage
+import { BlogPage } from './pages/BlogPage';
+import { StockFlowPage } from './pages/StockFlowPage';
 
 // ... (modalData is unchanged) ...
 const modalData = { 
@@ -60,7 +61,8 @@ function App() {
           <Route path="/products/quantumdash" element={<QuantumDashPage />} />
           <Route path="/products/kyc-suite" element={<KycSuitePage />} />
           <Route path="/products/custom-ai" element={<CustomAiPage />} />
-          <Route path="/blog" element={<BlogPage />} /> {/* 2. Add new route */}
+          <Route path="/blog" element={<BlogPage />} />
+          <Route path="/products/stock-flow" element={<StockFlowPage />} />
         </Routes>
       </main>
 
