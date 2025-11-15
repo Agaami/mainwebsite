@@ -1,9 +1,8 @@
 import { useRef, useMemo } from 'react';
 import { useFrame } from '@react-three/fiber';
-import * as THREE from 'three'; // Import the full THREE library
+import * as THREE from 'three';
 
 // --- Component 1: The Plexus (Neural Network) ---
-// (This component is unchanged. It's still Layer 2)
 const Plexus = () => {
   const groupRef = useRef<THREE.Group>(null);
 
@@ -42,7 +41,7 @@ const Plexus = () => {
     lGeo.setAttribute('position', new THREE.Float32BufferAttribute(lineVertices, 3));
     
     return [pGeo, lGeo];
-  }, [particleCount, spread, connectionThreshold]);
+  }, []); // Dependencies removed as variables are constant
 
   useFrame((_state, delta) => {
     if (groupRef.current) {
@@ -89,10 +88,10 @@ const CosmicDust = () => {
     }
     geo.setAttribute('position', new THREE.BufferAttribute(positions, 3));
     return geo;
-  }, [particleCount, spread]);
+  }, []); // Dependencies removed as variables are constant
 
   // Animation for the dust
-  useFrame((delta) => {
+  useFrame((_state, delta) => {
     if (pointsRef.current) {
       // We'll rotate it very slowly for a gentle drift
       pointsRef.current.rotation.y += delta * 0.01;
