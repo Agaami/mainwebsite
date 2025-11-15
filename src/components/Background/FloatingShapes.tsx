@@ -92,7 +92,7 @@ const CosmicDust = () => {
   }, [particleCount, spread]);
 
   // Animation for the dust
-  useFrame((stat, delta) => {
+  useFrame((delta) => {
     if (pointsRef.current) {
       // We'll rotate it very slowly for a gentle drift
       pointsRef.current.rotation.y += delta * 0.01;
