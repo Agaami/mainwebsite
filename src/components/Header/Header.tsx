@@ -20,7 +20,7 @@ export const Header = () => {
       className="text-gray-300 hover:text-white transition-colors px-3 py-2"
     >
       {label}
-    </HashNavLink>
+    </HashLink>
   );
 
   return (
