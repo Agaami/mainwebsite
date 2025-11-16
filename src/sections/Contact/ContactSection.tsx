@@ -126,7 +126,7 @@ export const ContactSection = () => {
               </div>
             </motion.div>
 
-            {/* Card 2: Socials (NEW) */}
+            {/* Card 2: Socials (UPDATED) */}
             <motion.div
               className="glass-card p-8 rounded-xl"
               initial={{ opacity: 0, x: -50 }}
@@ -139,12 +139,21 @@ export const ContactSection = () => {
                 Stay updated with our latest research, product launches, and insights.
               </p>
               <div className="flex items-center space-x-6">
-                {/* --- FIX: Updated Twitter link --- */}
-                <SocialLink href="https://x.com/agaamiailabs" icon={FaTwitter} label="X (Twitter)" />
-                <SocialLink href="#" icon={FaLinkedin} label="LinkedIn" />
-                {/* --- FIX: Updated Instagram link --- */}
-                <SocialLink href="https://www.instagram.com/agaamiailabs" icon={FaInstagram} label="Instagram" />
-                
+                <SocialLink 
+                  href="https://x.com/agaamiailabs" 
+                  icon={FaTwitter} 
+                  label="X (Twitter)" 
+                />
+                <SocialLink 
+                  href="#" 
+                  icon={FaLinkedin} 
+                  label="LinkedIn" 
+                />
+                <SocialLink 
+                  href="https://www.instagram.com/agaamiailabs/" 
+                  icon={FaInstagram} 
+                  label="Instagram" 
+                />
               </div>
             </motion.div>
           </div>
@@ -209,7 +218,7 @@ const SocialLink = ({ href, icon: Icon, label }: { href: string, icon: any, labe
     target="_blank"
     rel="noopener noreferrer"
     aria-label={label}
-    className="text-gray-400 hover:text-primary transition-colors"
+    className="text-gray-400 hover:text-cyan-400 transition-colors"
   >
     <Icon className="h-7 w-7" />
   </a>
