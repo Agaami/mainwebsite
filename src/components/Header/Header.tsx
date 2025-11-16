@@ -13,7 +13,6 @@ export const Header = () => {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  // HashLink for scrolling on the same page
   const HashNavLink = ({ to, label }: { to: string, label: string }) => (
     <HashLink 
       smooth 
@@ -21,7 +20,7 @@ export const Header = () => {
       className="text-gray-300 hover:text-white transition-colors px-3 py-2"
     >
       {label}
-    </HashLink>
+    </HashNavLink>
   );
 
   return (
@@ -37,22 +36,20 @@ export const Header = () => {
           <div className="flex items-center space-x-3">
             <img 
               className="h-8 w-auto" 
-              src="/logo.png"
-              alt="agaami ai labs logo" 
+              src="/logo.jpeg"
+              alt="Agaami AI Labs logo" 
             />
             <span className="font-bold text-xl text-white">
-              agaami ai labs
+              Agaami AI Labs
             </span>
           </div>
 
-          {/* --- THIS IS THE FIX --- */}
           <nav className="hidden md:flex items-center space-x-6 font-medium">
             <HashNavLink to="/#vision" label="Vision" />
             <HashNavLink to="/#products" label="Products" />
             <HashNavLink to="/#services" label="Services" />
             <HashNavLink to="/#contact" label="Contact" />
             
-            {/* Apply the new .glowing-button class */}
             <Link 
               to="/blog"
               className="glowing-button"
@@ -60,8 +57,6 @@ export const Header = () => {
               Blog
             </Link>
           </nav>
-          {/* --- END OF FIX --- */}
-
         </div>
       </nav>
     </header>
