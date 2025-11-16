@@ -139,9 +139,11 @@ export const ContactSection = () => {
                 Stay updated with our latest research, product launches, and insights.
               </p>
               <div className="flex items-center space-x-6">
-                <SocialLink href="#" icon={FaTwitter} label="X (Twitter)" />
+                {/* --- FIX: Updated Twitter link --- */}
+                <SocialLink href="https://x.com/agaamiailabs" icon={FaTwitter} label="X (Twitter)" />
                 <SocialLink href="#" icon={FaLinkedin} label="LinkedIn" />
-                <SocialLink href="#" icon={FaInstagram} label="Instagram" />
+                {/* --- FIX: Updated Instagram link --- */}
+                <SocialLink href="https://www.instagram.com/agaamiailabs" icon={FaInstagram} label="Instagram" />
                 
               </div>
             </motion.div>
