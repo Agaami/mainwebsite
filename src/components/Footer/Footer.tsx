@@ -14,7 +14,7 @@ export const Footer = ({ onModalOpen }: FooterProps) => {
         flex flex-col md:flex-row justify-between items-center text-gray-400 text-sm"
       >
         <span>
-          © {currentYear} agaami ai labs. All rights reserved.
+          © {currentYear} Agaami AI Labs. All rights reserved.
         </span>
         <nav className="flex space-x-6 mt-4 md:mt-0">
           <button 
