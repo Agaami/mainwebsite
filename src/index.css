@@ -23,4 +23,21 @@ body {
   .glass-card:hover {
     backdrop-filter: blur(20px); /* Increased blur on hover */
   }
+
+  .glowing-button {
+    background: linear-gradient(45deg, #8b5cf6, #06b6d4);
+    padding: 0.5rem 1.5rem;
+    border-radius: 0.5rem;
+    color: white;
+    font-weight: 600;
+    position: relative;
+    overflow: hidden;
+    transition: all 0.3s ease;
+    box-shadow: 0 0 20px rgba(139, 92, 246, 0.5);
+  }
+
+  .glowing-button:hover {
+    box-shadow: 0 0 30px rgba(139, 92, 246, 0.8);
+    transform: translateY(-2px);
+  }
 }
